@@ -13,6 +13,6 @@ The triangle from above is represented as: [[6],[3,5],[9,7,1],[4,6,8,4]]
 
 To run it you just have call the main method passing the array as parameter and it will return the max sum, just like that:
 ```
-ruby main.rb "[[6],[3,5],[9,7,1],[4,6,8,4]]"
+ruby hell-triangle/lib/main.rb "[[6],[3,5],[9,7,1],[4,6,8,4]]"
 >26
 ```
