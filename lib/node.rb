@@ -10,16 +10,18 @@ end
 
 class NodeUtil
 	def self.createNodeFromArray array, index = 0
+		row = array[0]
 
 		if array.length == 1
-			return Node.new(array[index], nil, nil)
+			return Node.new(row[index], nil, nil)
 		else
-			array.shift
+			node = array.shift
+			array_copy = Marshal.load(Marshal.dump(array))
 
 			left_node = createNodeFromArray(array, index)
-			right_node = createNodeFromArray(array, index+1)
+			right_node = createNodeFromArray(array_copy, index+1)
 
-			return Node.new(array[index], left_node, right_node)
+			return Node.new(node[index], left_node, right_node)
 		end
 	end
 end
